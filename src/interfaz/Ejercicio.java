@@ -5,6 +5,8 @@
  */
 package interfaz;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author jaime
@@ -27,21 +29,179 @@ public class Ejercicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        txtPersonaUno = new javax.swing.JTextField();
+        txtPersonaDos = new javax.swing.JTextField();
+        txtPersonaTres = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        lblPorcentajeUno = new javax.swing.JTextField();
+        lblPorcentajeDos = new javax.swing.JTextField();
+        lblPorcentajeTres = new javax.swing.JTextField();
+        cmdCalcular = new javax.swing.JButton();
+        cmdBorrar = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setText("Ejercicio 1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, -1, -1));
+
+        jLabel2.setText("Persona No.1");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
+
+        jLabel3.setText("Persona No.2");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, -1, -1));
+
+        jLabel4.setText("Persona No.3");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 80, -1, -1));
+
+        txtPersonaUno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPersonaUnoKeyTyped(evt);
+            }
+        });
+        jPanel1.add(txtPersonaUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 70, -1));
+
+        txtPersonaDos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPersonaDosKeyTyped(evt);
+            }
+        });
+        jPanel1.add(txtPersonaDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, 70, -1));
+
+        txtPersonaTres.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPersonaTresKeyTyped(evt);
+            }
+        });
+        jPanel1.add(txtPersonaTres, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 100, 80, -1));
+
+        jLabel5.setText("Porcentaje 1");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
+
+        jLabel6.setText("Porcentaje 2");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, -1, -1));
+
+        jLabel7.setText("Porcentaje 3");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, -1, -1));
+
+        lblPorcentajeUno.setEditable(false);
+        jPanel1.add(lblPorcentajeUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 70, -1));
+
+        lblPorcentajeDos.setEditable(false);
+        jPanel1.add(lblPorcentajeDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 70, -1));
+
+        lblPorcentajeTres.setEditable(false);
+        jPanel1.add(lblPorcentajeTres, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 200, 70, -1));
+
+        cmdCalcular.setText("Calcular");
+        cmdCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdCalcularActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cmdCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 290, 80, 40));
+
+        cmdBorrar.setText("Borrar");
+        cmdBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdBorrarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cmdBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(283, 290, 80, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtPersonaUnoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPersonaUnoKeyTyped
+  
+        char c=evt.getKeyChar(); 
+          if(!Character.isDigit(c)) { 
+              getToolkit().beep(); 
+              evt.consume(); 
+          }     
+    }//GEN-LAST:event_txtPersonaUnoKeyTyped
+
+    private void txtPersonaDosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPersonaDosKeyTyped
+
+        char c=evt.getKeyChar(); 
+          if(!Character.isDigit(c)) { 
+              getToolkit().beep(); 
+              evt.consume(); 
+          }
+    }//GEN-LAST:event_txtPersonaDosKeyTyped
+
+    private void txtPersonaTresKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPersonaTresKeyTyped
+
+         char c=evt.getKeyChar(); 
+          if(!Character.isDigit(c)) { 
+              getToolkit().beep(); 
+              evt.consume(); 
+          }
+    }//GEN-LAST:event_txtPersonaTresKeyTyped
+
+    private void cmdCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCalcularActionPerformed
+
+        if(txtPersonaUno.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(this, "Digite la inversion de la 1 persona");
+            txtPersonaUno.requestFocusInWindow();
+        }else if(txtPersonaDos.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(this, "Digite la inversion de la 2 persona");
+            txtPersonaDos.requestFocusInWindow();
+        }else if(txtPersonaTres.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(this, "Digite la inversion de la 3 persona");
+            txtPersonaTres.requestFocusInWindow();
+        }else{
+            
+        double p1= Double.parseDouble(txtPersonaUno.getText());
+        double p2= Double.parseDouble(txtPersonaDos.getText());
+        double p3= Double.parseDouble(txtPersonaTres.getText());
+     
+     
+        double res1= (p1*100)/(p1+p2+p3);
+        double res2= (p2*100)/(p1+p2+p3);
+        double res3= (p3*100)/(p1+p2+p3);
+ 
+             
+        lblPorcentajeUno.setText(""+res1+"%");
+        lblPorcentajeDos.setText(""+res2+"%");
+        lblPorcentajeTres.setText(""+res3+"%");
+        }
+    }//GEN-LAST:event_cmdCalcularActionPerformed
+
+    private void cmdBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBorrarActionPerformed
+
+     txtPersonaUno.setText("");
+     txtPersonaDos.setText("");
+     txtPersonaTres.setText("");
+    
+      lblPorcentajeUno.setText("");
+      lblPorcentajeDos.setText("");
+      lblPorcentajeTres.setText("");
+    
+      txtPersonaUno.requestFocusInWindow();
+      
+    }//GEN-LAST:event_cmdBorrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +239,21 @@ public class Ejercicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cmdBorrar;
+    private javax.swing.JButton cmdCalcular;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField lblPorcentajeDos;
+    private javax.swing.JTextField lblPorcentajeTres;
+    private javax.swing.JTextField lblPorcentajeUno;
+    private javax.swing.JTextField txtPersonaDos;
+    private javax.swing.JTextField txtPersonaTres;
+    private javax.swing.JTextField txtPersonaUno;
     // End of variables declaration//GEN-END:variables
 }
